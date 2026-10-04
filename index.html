@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<head>    
+    <title>Counter</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div id="head">
+    <label id="heading">COUNTER</label>
+    </div>
+    
+    <div id="btncontainer">
+        <label id="labelid">0</label><br>
+        <button id="inc" class="btns">increase</button>
+        <button id="reset" class="btns">reset</button>
+        <button id="dec" class="btns">decrease</button>
+    </div>
+    <script>
+        const decbtn = document.getElementById("dec");
+        const incbtn = document.getElementById("inc");
+        const resetbtn = document.getElementById("reset");
+        const countlabel = document.getElementById("labelid");
+        let count =0;
+        incbtn.onclick=function(){
+            count++;
+            countlabel.textContent=count;
+        }
+        decbtn.onclick=function(){
+            count--;
+            countlabel.textContent=count;
+        }
+        resetbtn.onclick=function(){
+            count=0;
+            countlabel.textContent=count;
+        }
+        
+    </script>
+</body>
+</html>
